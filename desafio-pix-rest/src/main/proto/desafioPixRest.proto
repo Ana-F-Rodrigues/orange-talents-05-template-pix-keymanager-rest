@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.pix.rest";
+option java_outer_classname = "DesafioPixRest";
+option objc_class_prefix = "HLW";
+
+package br.com.pix.rest;
+
+service DesafioPixRestService {
+  rpc send (DesafioPixRestRequest) returns (DesafioPixRestReply) {}
+}
+
+message DesafioPixRestRequest {
+  string name = 1;
+}
+
+message DesafioPixRestReply {
+  string message = 1;
+}
